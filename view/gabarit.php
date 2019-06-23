@@ -2,6 +2,8 @@
 <html>
     <head>
       <meta charset="utf-8"/>
+      <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
+      <script>tinymce.init({ selector:'textarea' });</script>
       <script src="https://kit.fontawesome.com/4bfa2612eb.js"></script>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <link rel="stylesheet" href="<?= HOST?>public/css/style.css" />

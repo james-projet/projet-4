@@ -1,6 +1,6 @@
 <?php
 
-class CommentaireManager
+class Commentaire
 {
   public function signalerCom($params)
   {
@@ -30,14 +30,7 @@ class CommentaireManager
     header("location:" . HOST . "showcomsignaler");
   }
 
-  public function showSignin($params)
-  {
-    $manager = new EpisodeManager();
-    $episodes = $manager->findAll();
-    $myView = new View('signin');
-    $myView->render(array('episodes' => $episodes));
 
-  }
 
   public function stockCommentaire($params)
   {

@@ -3,19 +3,14 @@
 
 class EpisodeManager extends BddManager
 {
-  private $bdd;
 
-  public function __construct()
-  {
-    $this->bdd = new PDO('mysql:host=localhost;dbname=p4jean;charset=utf8', 'root', '');
-  }
 /**
 *Sert a stocker tous les episodes dans un tableau
 *return un tableau d objet array(object)
 **/
   public function findAll()
   {
-     $bdd = $this->bdd;
+     $bdd = $this->getBdd();
      // Récupération des 10 derniers messages
      $reponse = $bdd->prepare('SELECT id, titre, episode FROM episode ORDER BY ID DESC');
 
@@ -42,7 +37,7 @@ class EpisodeManager extends BddManager
   **/
   public function findBy($id)
   {
-    $bdd = $this->bdd;
+    $bdd = $this->getBdd();
     $query = "SELECT id, titre, episode FROM episode WHERE id=:id";
     $reponse = $bdd->prepare($query);
     $reponse->bindValue('id', $id);
@@ -57,7 +52,7 @@ class EpisodeManager extends BddManager
 
   public function addEpisode($titre, $episode)
   {
-    $bdd = $this->bdd;
+    $bdd = $this->getBdd();
 
     $req = $bdd->prepare('INSERT INTO episode (titre, episode) VALUES(?, ?)');
     $req->execute(array($titre, $episode));
@@ -67,7 +62,7 @@ class EpisodeManager extends BddManager
 
   public function delEpisode($id)
   {
-       $bdd = $this->bdd;
+       $bdd = $this->getBdd();
        $req = $bdd->prepare('DELETE FROM episode WHERE id=:id');
        $req->bindValue('id', $id);
        $req->execute();

@@ -1,7 +1,6 @@
 <?php
 class CommentaireManager extends BddManager
 {
-
   /**
    * Sert a renvoyer un commentaire par rapport a son id
    * @param Int
@@ -41,7 +40,7 @@ class CommentaireManager extends BddManager
    **/
   public function stockageCommentaire($pseudo, $commentaire, $episode_id, $signaler)
   {
-    $bdd = $this->bdd;
+    $bdd = $this->getBdd();
 
     $req = $bdd->prepare('INSERT INTO commentaire (pseudo, commentaire, episode_id, date_creation, signaler) VALUES(?, ?, ?, NOW(), ?)');
     $req->execute(array($pseudo, $commentaire, $episode_id, $signaler));
@@ -51,7 +50,7 @@ class CommentaireManager extends BddManager
 
   public function signalerCommentaire($idsignaler)
   {
-    $bdd = $this->bdd;
+    $bdd = $this->getBdd();
     $req = $bdd->prepare('UPDATE commentaire SET signaler="1" WHERE id=:idsignaler');
     $req->bindValue('idsignaler', $idsignaler);
     $req->execute();
@@ -61,7 +60,7 @@ class CommentaireManager extends BddManager
 
   public function findSignaler()
   {
-    $bdd = $this->bdd;
+    $bdd = $this->getBdd();
     $req = $bdd->query("SELECT * FROM commentaire WHERE signaler='1'");
     while ($donnees = $req->fetch())
     {
@@ -81,7 +80,7 @@ class CommentaireManager extends BddManager
 
   public function deleteCommentaire($id)
   {
-     $bdd = $this->bdd;
+     $bdd = $this->getBdd();
      $req = $bdd->prepare('DELETE FROM commentaire WHERE id=:id');
      $req->bindValue('id', $id);
      $req->execute();

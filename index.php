@@ -7,6 +7,6 @@ MyAutoload::start();
 (isset($_GET['action'])) ? $action = $_GET['action'] : $action = "homepage";
 (isset($_GET['id'])) ? $id = $_GET['id'] : $id = "?";
 
-// role de router
+// role de routeur
 $routeur = new Routeur($action);
 $routeur->renderController();

@@ -3,16 +3,9 @@
 class ConnexionManager extends BddManager
 {
 
-  private $bdd;
-
-  public function __construct()
-  {
-    $this->bdd = new PDO('mysql:host=localhost;dbname=p4jean;charset=utf8', 'root', '');
-  }
-
   public function stockMdp($pseudo ,$pass_hache)
   {
-    $bdd = $this->bdd;
+    $bdd = $this->getBdd();
     $req = $bdd->prepare('INSERT INTO identifiant(pseudo, mdp) VALUES(:pseudo, :mdp)');
     $req->execute(array(
       'pseudo' => $pseudo,
@@ -24,7 +17,7 @@ class ConnexionManager extends BddManager
 
   public function verifMdp($pseudo ,$mdp)
   {
-    $bdd = $this->bdd;
+    $bdd = $this->getBdd();
     $req = $bdd->prepare('SELECT id, mdp FROM identifiant WHERE pseudo = :pseudo');
     $req->execute(array('pseudo' => $pseudo));
     $identifiant = $req->fetch();
