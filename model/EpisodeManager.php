@@ -12,7 +12,7 @@ class EpisodeManager extends BddManager
   {
      $bdd = $this->getBdd();
      // Récupération des 10 derniers messages
-     $reponse = $bdd->prepare('SELECT id, titre, episode FROM episode ORDER BY ID DESC');
+     $reponse = $bdd->prepare('SELECT id, titre, episode FROM episode ORDER BY ID');
 
      $reponse->execute();
 

@@ -1,22 +1,92 @@
-<p><?php if (isset($_SESSION['pseudo'])) { echo "Salut, " . $_SESSION['pseudo'] . " ";};?></p>
 <!--texte de bienvenue -->
-  <div class="row" id="texthome">
-    <div class="col-lg-10" id="textwelcome">
-      <p>Bonjour,Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
-        Constituendi autem sunt qui sint in amicitia fines et quasi termini diligendi. De quibus tres video sententias ferri, quarum nullam probo, unam, ut eodem modo erga amicum adfecti simus, quo erga nosmet ipsos, alteram, ut nostra in amicos benevolentia illorum erga nos benevolentiae pariter aequaliterque respondeat, tertiam, ut, quanti quisque se ipse facit, tanti fiat ab amicis.
+<div id="texthome">
+  <div class="timeline">
+    <div class="item">
+      <div class="image">
+        <div>
+          <img src="<?= HOST?>public/photos/bebe.jpg" alt="bebe">
 
-  Intellectum est enim mihi quidem in multis, et maxime in me ipso, sed paulo ante in omnibus, cum M. Marcellum senatui reique publicae concessisti, commemoratis praesertim offensionibus, te auctoritatem huius ordinis dignitatemque rei publicae tuis vel doloribus vel suspicionibus anteferre. Ille quidem fructum omnis ante actae vitae hodierno die maximum cepit, cum summo consensu senatus, tum iudicio tuo gravissimo et maximo. Ex quo profecto intellegis quanta in dato beneficio sit laus, cum in accepto sit tanta gloria.
+        </div>
+      </div>
+      <div class="details">
+        <div>
+          <h4>Ma naissance</h4><p>(01.01.1982)</p>
+          <p>Eh oui je suis née le jour de l'an est-ce un cadeau pour l'année 1982 peut-être pas. Née dans une famille assez modeste mais pleine d'amour mon enfance était idyllique.
+          </p>
+        </div>
+      </div>
+    </div>
 
-  Quanta autem vis amicitiae sit, ex hoc intellegi maxime potest, quod ex infinita societate generis humani, quam conciliavit ipsa natura, ita contracta res est et adducta in angustum ut omnis caritas aut inter duos aut inter paucos iungeretur.
+    <div class="item">
+      <div class="image">
+        <div>
+          <img src="<?= HOST?>public/photos/ado.jpg" alt="ado">
+        </div>
+      </div>
+      <div class="details">
+        <div>
+          <h4>Ma jeunesse</h4><p>(1996 - ...)</p>
+          <p>Les années 90 quel régal, les mangas et la culture rap bercèrent mon adolescence faite de période rebelle et de decouverte(que nous n'étaleront pas aujourd'hui).
+            Je Prus gout a la lecture grace au manga mais ceci ne fut que le début de mon histoire d'amour avec cette merveilleuse invention qu'est le livre.</p>
+        </div>
+      </div>
+    </div>
 
-  Illud tamen te esse admonitum volo, primum ut qualis es talem te esse omnes existiment ut, quantum a rerum turpitudine abes, tantum te a verborum libertate seiungas; deinde ut ea in alterum ne dicas, quae cum tibi falso responsa sint, erubescas. Quis est enim, cui via ista non pateat, qui isti aetati atque etiam isti dignitati non possit quam velit petulanter, etiamsi sine ulla suspicione, at non sine argumento male dicere? Sed istarum partium culpa est eorum, qui te agere voluerunt; laus pudoris tui, quod ea te invitum dicere videbamus, ingenii, quod ornate politeque dixisti.
+    <div class="item">
+      <div class="image">
+        <div>
+          <img src="<?= HOST?>public/photos/livre.png" alt="livre">
+        </div>
+      </div>
+      <div class="details">
+        <div>
+          <h4>Ma passion</h4><p>(1998 - ...)</p>
+          <p>Lire lire et encore lire certain prendrait ça pour une corvée mais pour moi ce n'est que bonheur, voyage, decouverte et imagination. Je passe mon temps à lire et quand j'arrête je me mets à écrire mes premières histoires qui reste pour l'instant un plaisir personnel</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image">
+        <div>
+          <img src="<?= HOST?>public/photos/train.jpg" alt="train">
 
-      </p>
-    <h3>Dernier episode publier</h3>
-<!--renvoi le dernier titre et le dernier episodes stocker en BDD-->
-    <h2><?= $episodes[0]->getTitre();?></h2>
-    <br/>
-    <p><?= $episodes[0]->getEpisode();?></p>
-
+        </div>
+      </div>
+      <div class="details">
+        <div>
+          <h4>Mes voyages</h4><p>(2000)</p>
+          <p>L'année 2000 que beaucoup de personnes redoutaient on a changé de millénaire et après...Pour moi ce n'est que le début de mes voyages je quitte le cocon familial et me prend au gout du risque et de l'aventure.
+            Je traverse l'Europe en train et rencontre des personnes formidables mais surtout des histoires et des cultures différentes et intrigantes.</p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="image">
+        <div>
+          <img src="<?= HOST?>public/photos/histoire.jpg" alt="histoire">
+        </div>
+      </div>
+      <div class="details">
+        <div>
+          <h4>Mes histoires</h4><p>2010</p>
+          <p>Après temps de périple et de decouverte je finis en Alaska avec des souvenirs plein la tete et l'envie de partager. Mais comment me dirait vous.
+            En écrivant pardi! Je me mets alors à écrire pendant plusieurs mois les contes et légendes des pays que j'ai decouvert en y rajoutant ma touche personnelle et mon grain de folie en espérant que ça vous plaise et que par ce biais vous puissiez revivre mon voyage et les émotions qui m'ont traversé.
+            Bonne lecture!</p>
+        </div>
+      </div>
     </div>
   </div>
+  <div id="lastepisode">
+
+    <!--renvoi le dernier titre et le dernier episodes stocker en BDD-->
+    <div id="chapitre">
+      <h3>Dernier chapitre</h3>
+      <h2><?= $episodes[0]->getTitre();?></h2>
+      <br/>
+      <p><?= $episodes[0]->getEpisode();?></p>
+    </div>
+
+  </div>
+
+
+</div>

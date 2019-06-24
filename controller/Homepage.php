@@ -2,10 +2,6 @@
 
 class Homepage
 {
-  /**
-  *Sert a creer la vue
-  *$params = tableau des elements de l url
-  **/
   public function showHomepage($params)
   {
     $manager = new EpisodeManager();

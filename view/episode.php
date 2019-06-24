@@ -8,6 +8,4 @@
     </div>
 </div>
 
-
-
 <?= include_once(VIEW.'commentaire.php');?>

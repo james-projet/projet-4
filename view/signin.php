@@ -1,12 +1,12 @@
-<form class="" action="login" method="post" class="form">
+<form action="login" method="post" class="form">
+  <p>Login</p>
   <div class="">
-    <input placeholder="pseudo" type="text" name="pseudo" id="pseudoedit" />
+    <input placeholder="pseudo" type="text" name="pseudo" class="pseudo" />
   </div>
   <div class="">
-    <input placeholder="mot de passe" type="text" name="mdp" id="mdpedit" />
+    <input placeholder="mot de passe" type="password" name="mdp" id="mdp" />
   </div>
   <div class="">
-    <input type="submit" value="Envoyer" id="buttonedit">
+    <input type="submit" value="Envoyer" class="button">
   </div>
 </form>
-<a href="<?= HOST?>deco">deco</a>

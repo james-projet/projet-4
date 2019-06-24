@@ -23,21 +23,25 @@ class ConnexionManager extends BddManager
     $identifiant = $req->fetch();
     $passwordCorrect = password_verify($mdp, $identifiant['mdp']);
 
-    if (!$identifiant) {
-       echo "Mauvais identifiant ou mot de passe !";
+    if (!$identifiant)
+    {
+        echo "Mauvais identifiant ou mot de passe !";
     }
-    else {
-           if ($passwordCorrect) {
-                $_SESSION['id'] = $identifiant['id'];
-                $_SESSION['pseudo'] = $pseudo;
-                return $_SESSION['id'];
-                return $_SESSION['pseudo'];
-                header("location:signin");
-            }
-             else {
-                echo "mauvais identifiant ou mot de passe !";
-             }
-         }
+    else
+    {
+        if ($passwordCorrect)
+        {
+            $_SESSION['id'] = $identifiant['id'];
+            $_SESSION['pseudo'] = $pseudo;
+            return $_SESSION['id'];
+            return $_SESSION['pseudo'];
+            header("location:signin");
+        }
+        else
+        {
+            echo "mauvais identifiant ou mot de passe !";
+        }
+    }
 
-    }
+  }
 }
