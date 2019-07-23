@@ -10,6 +10,7 @@ class Ccommentaire
 
     $comanager = new CommentaireManager();
     $co = $comanager->signalerCommentaire($idsignaler);
+    $_SESSION['flashMessage'] = "Le commentaire a bien été signalé";
     header("location:" . HOST . "episode/id/" . $id);
   }
 
@@ -17,11 +18,10 @@ class Ccommentaire
   {
     $manager = new EpisodeManager();
     $comManager = new CommentaireManager();
-    $episodes = $manager->findAll();
     $commentaires = $comManager->findSignaler();
 
     $myView = new View('comsignaler');
-    $myView->render(array('episodes' => $episodes, 'commentaires' => $commentaires));
+    $myView->render(array('commentaires' => $commentaires));
   }
 
   public function deleteCom($params)
@@ -37,8 +37,8 @@ class Ccommentaire
   public function stockCommentaire($params)
   {
     $episode_id = $params['episode_id'];
-    $pseudo = $params['pseudo'];
-    $commentaire = $params['commentaire'];
+    $pseudo = htmlspecialchars($params['pseudo']);
+    $commentaire = htmlspecialchars($params['commentaire']);
     $signaler = '0';
 
     $manager = new CommentaireManager();

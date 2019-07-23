@@ -5,18 +5,19 @@ class Cepisode
 {
   public function showAll($params)
   {
+    $page = (!empty($params['page']) ? $params['page'] : 1);
     $manager = new EpisodeManager();
-    $episodes = $manager->findAll();
+    $nbPage = $manager->page();
+    $episodes = $manager->findAll($page);
     $myView = new View('allepisode');
-    $myView->render(array('episodes' => $episodes));
+    $myView->render(array('episodes' => $episodes, 'nbPage' => $nbPage));
   }
 
   public function showNvlEpisode($params)
   {
     $manager = new EpisodeManager();
-    $episodes = $manager->findAll();
     $myView = new View('nvlepisode');
-    $myView->render(array('episodes' => $episodes));
+    $myView->render(array());
   }
 
   public function showEpisode($params)
@@ -25,15 +26,12 @@ class Cepisode
     $id = $params['id']; // $request->get('id');
     $manager = new EpisodeManager();
     $comManager = new CommentaireManager();
-    $episodes = $manager->findAll(); // tableau d'objet => récupérer les données dans un tableau
     $myEpisode = $manager->findBy($id); // objet
     $commentaires = $comManager->findCommentaireById($id);
 
     $myView = new View('episode');
-    $myView->render(array('episodes' => $episodes, 'myEpisode' => $myEpisode, 'commentaires' => $commentaires, 'id' =>$id));
+    $myView->render(array('myEpisode' => $myEpisode, 'commentaires' => $commentaires, 'id' =>$id));
   }
-
-
 
   public function stockEpisode($params)
   {

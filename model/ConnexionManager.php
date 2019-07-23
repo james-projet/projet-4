@@ -35,7 +35,6 @@ class ConnexionManager extends BddManager
             $_SESSION['pseudo'] = $pseudo;
             return $_SESSION['id'];
             return $_SESSION['pseudo'];
-            header("location:signin");
         }
         else
         {

@@ -2,12 +2,12 @@
 
     <div class="forminput" >
       <label>Votre pseudo   </label>
-      <input  type="text" placeholder="pseudo"  name="pseudo" id="pseudoform"/>
+      <input  type="text" placeholder="pseudo"  name="pseudo" id="pseudoform" required/>
     </div>
 
     <div class="forminput">
       <label>Votre message   </label>
-      <input type="text" placeholder="message" name="commentaire" />
+      <input type="text" placeholder="message" name="commentaire" required/>
     </div>
 
     <div>
@@ -23,7 +23,7 @@
       <p class="messagecom"><?= $commentaire->getCommentaire();?></p>
     </div>
     <div class="signaler-com">
-      <a class="liencom" href="<?= HOST?>comsignaler/signaler/<?= $commentaire->getId();?>/id/<?= $id ?>" aria-label="signaler un commentaire"><i class="fas fa-exclamation-triangle"></i></a>
+      <a class="liencom" href="<?= HOST?>comsignaler/signaler/<?= $commentaire->getId();?>/id/<?= $id ;?>" aria-label="signaler un commentaire"><i class="fas fa-exclamation-triangle"></i></a>
 
     </div>
 </div>

@@ -74,8 +74,9 @@ class CommentaireManager extends BddManager
      $commentaires[] = $commentaire;
    };
 
-      return $commentaires;
-
+      if(isset($commentaires)){
+        return $commentaires;
+      }
   }
 
   public function deleteCommentaire($id)

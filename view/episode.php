@@ -4,7 +4,7 @@
     <a id="supepisode" class="liencom" href="<?= HOST?>supprimerepisode/id/<?= $myEpisode->getId();?>" aria-label="supprimer l'episode"><i class="fas fa-trash-alt"></i> Supprimer episode</a>
     <?php  endif;?>
     <div class="letter">
-      <p class="first"><?= $myEpisode->getEpisode();?></p>
+      <p><?= $myEpisode->getEpisode();?></p>
     </div>
 </div>
 

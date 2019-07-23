@@ -1,3 +1,4 @@
+<?php if (isset($echec)){ echo "<p>mauvais identifiant ou mot de passe</p>";};?>
 <form action="login" method="post" class="form">
   <p>Login</p>
   <div class="">
