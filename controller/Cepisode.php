@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 
 class Cepisode
@@ -39,6 +39,28 @@ class Cepisode
     $episode = $params['episode'];
     $manager = new EpisodeManager();
     $nvlepisodes = $manager->addEpisode($titre, $episode);
+    $_SESSION['flashMessage'] = "votre épisode a été créé avec succès.";
+    header("location:" . HOST . "homepage");
+  }
+
+  public function edit($params)
+  {
+    $id = $params['id'];
+    $manager = new EpisodeManager();
+    $myEpisode = $manager->findBy($id);
+    $myView = new View('edit');
+    $myView->render(array('myEpisode' => $myEpisode, 'id' => $id));
+
+  }
+
+  public function editEpisode($params)
+  {
+    $id = $params['id'];
+    $titre = $params['titre'];
+    $episode = $params['episode'];
+    $manager = new EpisodeManager();
+    $edit = $manager->editById($id, $titre, $episode);
+    $_SESSION['flashMessage'] = "votre épisode a été edité.";
     header("location:" . HOST . "homepage");
   }
 
@@ -47,6 +69,7 @@ class Cepisode
     $id = $params['id'];
     $manager = new EpisodeManager();
     $episodes = $manager->delEpisode($id);
+    $_SESSION['flashMessage'] = "votre épisode a été supprimé.";
     header("location:" . HOST . "homepage");
 
   }

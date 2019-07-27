@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 
 class EpisodeManager extends BddManager
@@ -78,11 +78,23 @@ class EpisodeManager extends BddManager
 
   public function delEpisode($id)
   {
-       $bdd = $this->getBdd();
-       $req = $bdd->prepare('DELETE FROM episode WHERE id=:id');
-       $req->bindValue('id', $id);
-       $req->execute();
+    $bdd = $this->getBdd();
+    $req = $bdd->prepare('DELETE FROM episode WHERE id=:id');
+    $req->bindValue('id', $id);
+    $req->execute();
 
+  }
+
+  public function editById($id, $titre, $episode)
+  {
+    $bdd = $this->getBdd();
+    $req = $bdd->prepare('UPDATE episode SET episode=:episode, titre=:titre WHERE id=:id');
+    $req->bindValue('episode', $episode);
+    $req->bindValue('titre', $titre);
+    $req->bindValue('id', $id);
+    $req->execute();
+
+    return $this;
   }
 
 }

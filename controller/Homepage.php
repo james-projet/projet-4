@@ -18,19 +18,40 @@ class Homepage
     $myView->render(array());
   }
 
+  public function showConf($params)
+  {
+    $manager = new EpisodeManager();
+    $myView = new View('conf');
+    $myView->render(array());
+  }
+
+  public function showInscritpion($params)
+  {
+    $manager = new EpisodeManager();
+    $myView = new View('inscription');
+    $myView->render(array());
+  }
+
+  public function showSignin($params)
+  {
+    $manager = new EpisodeManager();
+    $myView = new View('signin');
+    $myView->render(array());
+
+  }
+
   public function sendMail($params)
   {
-    ini_set( 'display_errors', 1 );
-
-    error_reporting( E_ALL );
+    //ini_set("SMTP","ssl:smtp.free.fr");
+    //ini_set("smtp_port","465");
     $from = $params['email'];
     $to = "james.gaffe@yahoo.fr";
     $subject = $params['titre'];
     $message = $params['message'];
     $headers = "From:" . $from;
     mail($to, $subject, $message, $headers);
+    header("location:homepage");
   }
-
 
   public function stockageMdp($params)
   {
@@ -52,22 +73,6 @@ class Homepage
     $_SESSION['flashMessage'] = "bonjour " . $pseudo;
     header("location:homepage");
 
-
-  }
-
-  public function showInscritpion($params)
-  {
-    $manager = new EpisodeManager();
-    $myView = new View('inscription');
-    $myView->render(array());
-  }
-
-  public function showSignin($params)
-  {
-    $manager = new EpisodeManager();
-    $myView = new View('signin');
-    $myView->render(array());
-
   }
 
   public function deco($params)
@@ -76,11 +81,6 @@ class Homepage
     header("location:homepage");
   }
 
-  public function showConf($params)
-  {
-    $manager = new EpisodeManager();
-    $myView = new View('conf');
-    $myView->render(array());
-  }
+
 
 }

@@ -1,0 +1,325 @@
+/*parametre general*/
+
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+div {
+  width: 100%;
+}
+h2, h3{
+  text-align: center;
+}
+
+.contenu{
+  background-color: #dbcc8f;
+}
+
+nav{
+  background-color: #fff5eb;
+}
+
+p {
+  font-size: 1.5em;
+  margin-top: -10px;
+}
+.conf{
+  width: 95%;
+  padding-left: 5%;
+  padding-top: 2%;
+}
+
+.flash{
+  margin-left: 40%;
+}
+/*header*/
+
+.title {
+  z-index: 999;
+  position: absolute;
+  width: 300px;
+  padding: 5px;
+  background-color: #e3f2fdb0;
+  margin-top: -188px;
+  margin-left: 42%;
+}
+
+#montagne {
+  height: 250px;
+  width: 100%;
+}
+
+#firstmenu{
+  padding-right: 20%;
+}
+
+#commenu{
+  padding-right: 10%;
+}
+#home {
+  margin-left: 50px;
+}
+
+#salut {
+  margin-top: 16px;
+  margin-left: 30%;
+}
+
+/*presentation et derniers article*/
+
+.timeline ,#firstepisode{
+    padding-left: 3%;
+    padding-top: 2%;
+    padding-right: 3%;
+    padding-bottom: 1%;
+}
+
+.item {
+  display: flex;
+}
+
+.image {
+  width: 20%;
+}
+
+.item img {
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 32px;
+}
+
+#firstepisode{
+  background-color: #f6e0b3;
+  padding-bottom: 1%;
+}
+
+#firstepisode p ,.letter p ,.text-episode p{
+  background-color: #f6e0b3!important;
+  margin: 0 auto;
+
+}
+
+#chapitre{
+  width: 96%;
+  margin-left: 2%;
+}
+
+#chapitre p {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#chapitre p a {
+  font-size: 0.8em;
+}
+/*footer*/
+
+#listfooter {
+  display: flex;
+  background-color: #4e4e4e;
+  color:white;
+}
+
+#listfooter ul{
+  list-style-type: none;
+}
+
+#listplus a{
+  color: white;
+}
+#listplus ,#listreseaux {
+  margin-left: 15%;
+  margin-top: 10px;
+}
+
+.imgfooter{
+  margin-left: 5%;
+  margin-bottom: 3px;
+}
+.reseaux {
+  width: 25px;
+}
+
+/*episode*/
+
+.letter {
+  background-color: #f6e0b3;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 26px auto 0;
+  max-width: 800px;
+  min-height: 300px;
+  padding: 24px;
+  position: relative;
+  width: 80%;
+}
+
+{
+  background-color: #f1f0d6!important;
+}
+#supepisode {
+  margin-top: -33px;
+  margin-left: 85px;
+  position: absolute;
+  text-decoration: none;
+  color: red;
+}
+
+#editepisode{
+  margin-top: -33px;
+  margin-left: 85px;
+}
+.page{
+  padding-left: 48%;
+}
+/*tous les episodes*/
+.all-episode{
+  width: 90%;
+  margin-left: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.text-episode{
+  margin-bottom: 3%;
+  background-color: #f6e0b3;
+}
+
+
+.image-episode{
+  width: 20%;
+}
+.image-episode img{
+  width: 250px;
+}
+/*formulaire com*/
+
+#formcom {
+  padding-left: 37%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.forminput {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+#pseudoform {
+  margin-left: 10px;
+}
+
+.button {
+  margin-left: 112px;
+}
+
+#btncom {
+  background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
+  border-radius: 7px;
+}
+
+#btncom:hover {
+  background-position: right center;
+}
+
+
+/*espace commentaires*/
+
+.espacecom {
+  display: flex;
+  padding-left: 5%;
+  background-color: #0f0e1c;
+  color: white;
+}
+
+.pseudocom {
+  font-weight: bold;
+}
+
+.datecom {
+  font-size: 0.5em;
+}
+
+.messagecom {
+  height: 50px;
+  color: black;
+  background-color: #f1f0d6;
+  padding-left: 2%;
+}
+
+.signaler-com {
+  width: 20%;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.liencom {
+  position: relative;
+  color: red;
+  cursor: pointer;
+}
+
+.liencom:hover:before {
+  opacity: 1;
+}
+
+.liencom:before {
+  content: attr(aria-label);
+  opacity: 0;
+  position: absolute;
+  top: 30px;
+  right: -90px;
+  font-size: 14px;
+  width: 100px;
+  padding: 10px;
+  color: #fff;
+  background-color: #555;
+  border-radius: 3px;
+  pointer-events: none;
+}
+/*com signaler*/
+#signaler{
+  height: 650px;
+}
+/*formulaire*/
+.form{
+  padding-left: 42%;
+  padding-bottom: 10%;
+  padding-top: 10%;
+}
+
+.button {
+  background-color: #fff5eb;
+  border-radius: 15%;
+  margin-left: 0%;
+}
+
+#message, #mdp, #email, .pseudo {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 300px;
+}
+
+#message{
+  padding-bottom: 150px;
+}
+
+/*nouvelle episode*/
+
+#form-nvl-episode {
+  padding: 3%;
+  background-color: #dbcc8f;
+  padding-left: 2%;
+  width: 96%;
+
+}
+
+@media screen and (min-width: 1600px)
+{
+    #firstmenu{
+      padding-right: 5%;
+    }
+}

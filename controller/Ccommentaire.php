@@ -2,18 +2,6 @@
 
 class Ccommentaire
 {
-
-  public function signalerCom($params)
-  {
-    $idsignaler = $params['signaler'];
-    $id  = $params['id'];
-
-    $comanager = new CommentaireManager();
-    $co = $comanager->signalerCommentaire($idsignaler);
-    $_SESSION['flashMessage'] = "Le commentaire a bien été signalé";
-    header("location:" . HOST . "episode/id/" . $id);
-  }
-
   public function showSignalerCom($params)
   {
     $manager = new EpisodeManager();
@@ -24,6 +12,17 @@ class Ccommentaire
     $myView->render(array('commentaires' => $commentaires));
   }
 
+  public function signalerCom($params)
+  {
+    $idsignaler = $params['signaler'];
+    $id  = $params['id'];
+
+    $manager = new CommentaireManager();
+    $co = $manager->signalerCommentaire($idsignaler);
+    $_SESSION['flashMessage'] = "Le commentaire a bien été signalé";
+    header("location:" . HOST . "episode/id/" . $id);
+  }
+
   public function deleteCom($params)
   {
     $id = $params['id'];
@@ -31,8 +30,6 @@ class Ccommentaire
     $deletecommentaires = $comManager->deleteCommentaire($id);
     header("location:" . HOST . "showcomsignaler");
   }
-
-
 
   public function stockCommentaire($params)
   {

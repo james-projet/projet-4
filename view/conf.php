@@ -1,4 +1,4 @@
-<div class="conf">
+﻿<div class="conf">
 <p>Politique de confidentialité</p>
 <p>Vos mentions légales :</p></br>
 

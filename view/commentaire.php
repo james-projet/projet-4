@@ -1,4 +1,4 @@
-<form action="<?= HOST?>stockage" method="post" id="formcom">
+﻿<form action="<?= HOST?>stockage" method="post" id="formcom">
 
     <div class="forminput" >
       <label>Votre pseudo   </label>

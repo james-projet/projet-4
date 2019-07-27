@@ -1,4 +1,4 @@
-
+﻿
 
 <form class="form" action="<?= HOST?>mail" method="post">
     <p>Contact</p>

@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="fr">
     <head>
       <meta charset="utf-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="description" content="voici le site de Jean forteroche qui lui permet de publier et écrire son livre">
-      <html lang="fr">
       <link rel="icon" type="image/png" sizes="16x16" href="<?= HOST?>public/photos/favicon-32x32.png">
       <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
       <script>tinymce.init({ selector:'textarea' });</script>

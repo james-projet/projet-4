@@ -28,7 +28,7 @@
               <a class="nav-link" href="<?= HOST?>showcomsignaler" >Commentaire signalé</a>
             </li>
             <li class="nav-item col-sm-1">
-              <a class="nav-link" href="<?= HOST?>editepisode">nouveau chapitre</a>
+              <a class="nav-link" href="<?= HOST?>creerepisode">nouveau chapitre</a>
             </li>
             <li class="nav-item col-sm-1">
               <a class="nav-link" href="<?= HOST?>deco">se déconnecter</a>

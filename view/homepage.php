@@ -1,6 +1,6 @@
-<!--texte de bienvenue -->
+﻿<!--texte de bienvenue -->
 <div id="texthome">
-  <div id="lastepisode">
+  <div id="firstepisode">
 
     <!--renvoi le dernier titre et le dernier episodes stocker en BDD-->
     <div id="chapitre">
@@ -26,8 +26,7 @@
       <div class="details">
         <div>
           <h4>Ma naissance</h4><p>(01.01.1982)</p>
-          <p>Eh oui je suis né le jour de l'an est-ce un cadeau pour l'année 1982 peut-être pas. Né dans une famille assez modeste mais pleine d'amour mon enfance fût idyllique.
-          </p>
+          <p>Eh oui je suis né le jour de l'an est-ce un cadeau pour l'année 1982 peut-être pas. Né dans une famille assez modeste mais pleine d'amour mon enfance fût idyllique.</p>
         </div>
       </div>
     </div>

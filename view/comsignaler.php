@@ -1,7 +1,7 @@
-
+﻿
 <div id="signaler">
   <p>Commentaire signalé</p>
-    <?php if(isset($commentaire)):foreach ($commentaires as $commentaire):?>
+    <?php if(isset($commentaires)):foreach ($commentaires as $commentaire):?>
 
       <div class="espacecom">
         <div class="com">

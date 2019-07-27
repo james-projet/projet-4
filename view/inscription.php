@@ -1,4 +1,4 @@
-
+﻿
 <form class="" action="<?= HOST?>inscrire" method="post" id="formedit">
   <div class="">
     <input placeholder="pseudo" type="text" name="pseudo"/>

@@ -1,4 +1,4 @@
-<?php foreach ($episodes as $episode): ?>
+﻿<?php foreach ($episodes as $episode): ?>
   <div class="all-episode">
       <div class="text-episode">
         <h3><?= $episode->getTitre()?></h3>

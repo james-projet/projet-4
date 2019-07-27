@@ -1,4 +1,4 @@
-<div id="listfooter">
+﻿<div id="listfooter">
   <div id="listplus">
     <ul>
       <li> <strong>en savoir plus</strong> </li>

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 class ConnexionManager extends BddManager
 {
