@@ -7,7 +7,6 @@ class Ccommentaire
     $manager = new EpisodeManager();
     $comManager = new CommentaireManager();
     $commentaires = $comManager->findSignaler();
-
     $myView = new View('comsignaler');
     $myView->render(array('commentaires' => $commentaires));
   }
@@ -16,7 +15,6 @@ class Ccommentaire
   {
     $idsignaler = $params['signaler'];
     $id  = $params['id'];
-
     $manager = new CommentaireManager();
     $co = $manager->signalerCommentaire($idsignaler);
     $_SESSION['flashMessage'] = "Le commentaire a bien été signalé";
@@ -37,13 +35,8 @@ class Ccommentaire
     $pseudo = htmlspecialchars($params['pseudo']);
     $commentaire = htmlspecialchars($params['commentaire']);
     $signaler = '0';
-
     $manager = new CommentaireManager();
-
     $stockage = $manager->stockageCommentaire($pseudo, $commentaire, $episode_id, $signaler);
     header("location:episode/id/$episode_id");
   }
-
-
-
 }

@@ -1,4 +1,4 @@
-﻿<form class="form-episode" action="<?= HOST;?>editepisode/id/<?= $id;?>" method="post">
+<form class="form-episode" action="<?= HOST;?>editepisode/id/<?= $id;?>" method="post">
   <div class="">
     <input placeholder="<?= $myEpisode->getTitre(); ?>" type="text" name="titre" class="pseudo"></input>
   </div>

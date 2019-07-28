@@ -1,4 +1,4 @@
-﻿<!--texte de bienvenue -->
+<!--texte de bienvenue -->
 <div id="texthome">
   <div id="firstepisode">
 

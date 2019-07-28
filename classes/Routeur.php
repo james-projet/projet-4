@@ -11,19 +11,21 @@ class Routeur
     $this->action = $element[0];
     $this->params = $this->extractParams($element);
     $this->routes = parse_ini_file("fichier.ini", true);
-
   }
   /**
   *Sert a extraire tous les element de l url et les stocker dans un tableau
   *$element = int,string
   *return params = array(int et ou string)
   **/
-  public function extractParams($element) {
+  public function extractParams($element)
+  {
     unset($element[0]);
     $params_get = array();
     $params = array();
-    if(isset($element[1])) {
-      for($i = 1; $i <= count($element); $i++) {
+    if(isset($element[1]))
+    {
+      for($i = 1; $i <= count($element); $i++)
+      {
           $params_get[$element[$i]] = $element[$i+1];
           $i++;
       }
@@ -38,7 +40,6 @@ class Routeur
   public function renderController()
   {
     $action = $this->action;
-
     if (key_exists($action, $this->routes))
     {
       $controller = $this->routes[$action]['controller'];
@@ -47,7 +48,8 @@ class Routeur
       $currentController = new $controller();
       $currentController->$method($this->params);
     }
-    else {
+    else
+    {
       echo '404';
     }
   }

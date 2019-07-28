@@ -81,6 +81,4 @@ class Homepage
     header("location:homepage");
   }
 
-
-
 }

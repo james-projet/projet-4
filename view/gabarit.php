@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
     <head>
       <meta charset="utf-8"/>
@@ -13,8 +13,10 @@
       <title>titre</title>
     </head>
     <body>
+
         <!--Header -->
         <?php include("header.php");?>
+
         <div class="contenu">
           <div class="flash">
             <?php if(isset($_SESSION['flashMessage'])):?>

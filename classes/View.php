@@ -15,14 +15,10 @@ class View
   **/
   public function render($datas = null)
   {
-
     extract($datas);
-
     ob_start();
     include(VIEW.$this->template.'.php');
     $content = ob_get_clean();
     include_once (VIEW.'gabarit.php');
   }
 }
-
- ?>
